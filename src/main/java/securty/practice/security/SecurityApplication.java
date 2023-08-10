@@ -23,7 +23,7 @@ public class SecurityApplication {
     private final UserRepository userRepository;
     private final ProductRepository productRepository;
     private final AuthorityRepository authorityRepository;
-    private final PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
     public static void main(String[] args) {
         SpringApplication.run(SecurityApplication.class, args);
@@ -34,7 +34,7 @@ public class SecurityApplication {
 
         User user = User.builder()
                 .username("john")
-                .password(passwordEncoder.encode("12345"))
+                .password(bCryptPasswordEncoder.encode("12345"))
                 .algorithm(BCRYPT)
                 .build();
 
