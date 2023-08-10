@@ -1,7 +1,7 @@
 package securty.practice.security.config.entity;
 
 import lombok.*;
-import securty.practice.security.config.config.Algorithm;
+import securty.practice.security.config.config.enumerated.Algorithm;
 
 import javax.persistence.*;
 import java.util.ArrayList;

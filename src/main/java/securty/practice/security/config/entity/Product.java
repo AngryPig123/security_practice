@@ -1,6 +1,10 @@
 package securty.practice.security.config.entity;
 
-import lombok.*;
+import lombok.AccessLevel;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import securty.practice.security.config.config.enumerated.Currency;
 
 import javax.persistence.*;
 
@@ -17,10 +21,11 @@ public class Product {
 
     private String name;
     private String price;
-    private String currency;
 
-    @Builder
-    public Product(String name, String price, String currency) {
+    @Enumerated(EnumType.STRING)
+    private Currency currency;
+
+    public Product(String name, String price, Currency currency) {
         this.name = name;
         this.price = price;
         this.currency = currency;

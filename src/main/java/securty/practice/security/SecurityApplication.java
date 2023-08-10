@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import securty.practice.security.config.entity.Authority;
 import securty.practice.security.config.entity.User;
 import securty.practice.security.config.repository.AuthorityRepository;
@@ -14,7 +13,7 @@ import securty.practice.security.config.repository.UserRepository;
 import javax.annotation.PostConstruct;
 import java.util.List;
 
-import static securty.practice.security.config.config.Algorithm.BCRYPT;
+import static securty.practice.security.config.config.enumerated.Algorithm.BCRYPT;
 
 @SpringBootApplication
 @RequiredArgsConstructor

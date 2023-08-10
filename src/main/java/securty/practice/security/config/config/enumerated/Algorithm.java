@@ -1,4 +1,4 @@
-package securty.practice.security.config.config;
+package securty.practice.security.config.config.enumerated;
 
 
 import lombok.AllArgsConstructor;

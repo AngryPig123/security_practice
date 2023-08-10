@@ -11,8 +11,6 @@ import securty.practice.security.config.repository.UserRepository;
 
 import java.util.function.Supplier;
 
-import static securty.practice.security.config.config.Algorithm.BCRYPT;
-
 @Slf4j
 @Service
 @RequiredArgsConstructor
@@ -25,7 +23,6 @@ public class JpaUserDetailsService implements UserDetailsService {
         Supplier<UsernameNotFoundException> s = () -> new UsernameNotFoundException("Problem during authentication");   //  유저 아이디가 없음.
 
         log.info("loadUserByUsername username = {}", username);
-        log.info("BCRYPT = {}", BCRYPT);
 
         User user = userRepository
                 .findByUsername(username)
