@@ -30,15 +30,12 @@ public class SecurityApplication {
 
     @PostConstruct
     public void init() {
-
         User user = User.builder()
                 .username("john")
                 .password(bCryptPasswordEncoder.encode("12345"))
                 .algorithm(BCRYPT)
                 .build();
-
         userRepository.save(user);
-
         List<Authority> authorities = List.of(
                 Authority.builder()
                         .name("create")
@@ -57,9 +54,7 @@ public class SecurityApplication {
                         .user(user)
                         .build()
         );
-
         authorityRepository.saveAll(authorities);
-
     }
 
 
