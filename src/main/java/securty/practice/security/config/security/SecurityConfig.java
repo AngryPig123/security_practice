@@ -1,7 +1,7 @@
 package securty.practice.security.config.security;
 
 
-import ch.qos.logback.classic.selector.servlet.LoggerContextFilter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -13,10 +13,14 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 import securty.practice.security.config.security.filter.AddLoggerFilter;
 import securty.practice.security.config.security.filter.RequestValidateFilter;
+import securty.practice.security.config.security.filter.StaticAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
+@RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    private final StaticAuthenticationFilter filter;
 
     @Bean
     public PasswordEncoder noOpPasswordEncoder() {
@@ -29,6 +33,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .addFilterBefore(   //  필터 체인에서 인증 필터 앞에 맞춤형 필터의 인스턴스를 추가.
                         new RequestValidateFilter(), BasicAuthenticationFilter.class
+                )
+                .addFilterBefore(
+                        filter, BasicAuthenticationFilter.class
                 )
                 .addFilterAfter(
                         new AddLoggerFilter(), BasicAuthenticationFilter.class
