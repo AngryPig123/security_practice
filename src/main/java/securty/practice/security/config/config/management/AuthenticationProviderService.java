@@ -36,13 +36,13 @@ public class AuthenticationProviderService implements AuthenticationProvider {  
 
         log.info("user info = {}", user);
 
-
         switch (user.getUser().getAlgorithm()) {
             case BCRYPT:
                 return checkPassword(user, password, bCryptPasswordEncoder);
             case SCRYPT:
                 return checkPassword(user, password, sCryptPasswordEncoder);
         }
+
         throw new BadCredentialsException("Bad credentials");
     }
 
