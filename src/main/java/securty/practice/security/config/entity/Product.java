@@ -4,7 +4,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import securty.practice.security.config.config.enumerated.Currency;
+import securty.practice.security.config.security.enumerated.Currency;
 
 import javax.persistence.*;
 

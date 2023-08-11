@@ -1,6 +1,5 @@
-package securty.practice.security.config.config;
+package securty.practice.security.config.security;
 
-import lombok.ToString;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

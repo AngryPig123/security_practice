@@ -1,11 +1,11 @@
-package securty.practice.security.config.config.management;
+package securty.practice.security.config.security.management;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import securty.practice.security.config.config.CustomUserDetails;
+import securty.practice.security.config.security.CustomUserDetails;
 import securty.practice.security.config.entity.User;
 import securty.practice.security.config.repository.UserRepository;
 

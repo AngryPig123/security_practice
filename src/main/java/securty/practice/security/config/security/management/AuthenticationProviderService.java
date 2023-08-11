@@ -1,4 +1,4 @@
-package securty.practice.security.config.config.management;
+package securty.practice.security.config.security.management;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -11,7 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.crypto.scrypt.SCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
-import securty.practice.security.config.config.CustomUserDetails;
+import securty.practice.security.config.security.CustomUserDetails;
 
 @Slf4j
 @Service

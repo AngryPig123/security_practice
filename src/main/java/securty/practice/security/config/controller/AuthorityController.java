@@ -11,10 +11,8 @@ public class AuthorityController {
 
     @GetMapping
     public String helloUsername(Authentication a) {
-
         StringBuffer stringBuffer = new StringBuffer("hello! ");
         return stringBuffer.append(a.getName()).toString();
-
     }
 
 }

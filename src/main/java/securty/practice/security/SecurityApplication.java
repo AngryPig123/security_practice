@@ -13,7 +13,7 @@ import securty.practice.security.config.repository.UserRepository;
 import javax.annotation.PostConstruct;
 import java.util.List;
 
-import static securty.practice.security.config.config.enumerated.Algorithm.BCRYPT;
+import static securty.practice.security.config.security.enumerated.Algorithm.BCRYPT;
 
 @SpringBootApplication
 @RequiredArgsConstructor

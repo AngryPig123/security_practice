@@ -1,4 +1,4 @@
-package securty.practice.security.config.config.management.password;
+package securty.practice.security.config.security.management.password;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
