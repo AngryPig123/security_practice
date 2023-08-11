@@ -9,10 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/hello")
 public class AuthorityController {
 
-    @GetMapping
+    @GetMapping(path = "/username")
     public String helloUsername(Authentication a) {
         StringBuffer stringBuffer = new StringBuffer("hello! ");
         return stringBuffer.append(a.getName()).toString();
+    }
+
+    @GetMapping
+    public String hello() {
+        return "hello";
     }
 
 }
